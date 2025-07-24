@@ -1,0 +1,10 @@
+Sleeping for 11 seconds with slowness factor 3.5
+Sleeping for 0.1 seconds with slowness factor 3.5
+Ensuring ALT is not pressed...
+Sleeping for 0.1 seconds with slowness factor 3.5
+Sleeping for 3 seconds with slowness factor 3.5
+Sleeping for 0.1 seconds with slowness factor 3.5
+Ensuring ALT is not pressed...
+Sleeping for 0.1 seconds with slowness factor 3.5
+Sleeping for 4 seconds with slowness factor 3.5
+No sound file found.
