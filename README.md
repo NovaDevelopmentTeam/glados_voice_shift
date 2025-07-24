@@ -8,7 +8,7 @@ This is the script that powers the Windows/Melodyne GUI automation side of the [
 It is extremely dirty and extremely brittle. It will assume the following (list may not be exhaustive):
 
   * All the files in this repo are extracted directly in `C:\` (who cares, it's a single-purpose VM)
-  * Melodyne is installed at `C:\Program Files\Celemony\Melodyne.3.2\Melodyne.exe` and is already set up to start normally (no license prompt etc)
+  * Melodyne is installed and is already set up to start normally (no license prompt etc)
   * The following Melodyne keyboard shortcuts are set:
     * `Ctrl+E`: Open export dialog (default setting)
     * `Ctrl+O` Open file dialog (default setting)
@@ -32,9 +32,9 @@ It required Python 2.x with the following dependencies:
 
 You'll likely want the 32-bit version because of these dependencies.
 
-Once you have all this set up, run `glados.py` and hopefully it will give its best shot at converting the `.glados.wav` file it finds in `Z:\files`. If all goes well, it will save the resulting file next to the original file, but with `ok-` in front of the filename and `.glados` replaced by `.done` (so the filename goes from `foo.glados.wav` to `ok-foo.done.wav`). Why? Just because.
+Once you have all this set up, run `glados.py` and hopefully it will give its best shot at converting the `.glados.wav` file it finds in `.\files`. If all goes well, it will save the resulting file next to the original file, but with `ok-` in front of the filename and `.glados` replaced by `.done` (so the filename goes from `foo.glados.wav` to `ok-foo.done.wav`). Why? Just because.
 
-The point of storing files in `Z:\files` is so that you can map a shared folder from the host to `Z:\` in the guest. Then you can just drop files in there from the host and have the results be written back to you, all without network connectivity down to the guest. That way you can also just remove all connectivity the guest may have. It's probably safer that way since Windows XP isn't going to get security patches anymore anyway. Then you just need to have something to run `glados.py` every once in a while. The Windows cron equivalent thing can probably do the job, or just write a shell loop that calls the script repeatedly and have that be run on startup. The script will automatically kill possibly-leftover instances of Melodyne using the provided `taskkill.exe` binary. If you don't trust a random binary in some random GitHub repo (which is good!), then check if you already have it in your Windows installation somewhere (it's a [standard Windows tool][taskkill.exe] now), or grab a copy from somewhere else on the Internet.
+You just need to have something to run `glados5.py` every once in a while. The Windows cron equivalent thing can probably do the job, or just write a shell loop that calls the script repeatedly and have that be run on startup. The script will automatically kill possibly-leftover instances of Melodyne using the provided `taskkill.exe` binary. If you don't trust a random binary in some random GitHub repo (which is good!), then check if you already have it in your Windows installation somewhere (it's a [standard Windows tool][taskkill.exe] now), or grab a copy from somewhere else on the Internet.
 
 Also, you may want to tweak the `slowfactor` variable in the `sleep` function to adjust how long the script wait between steps. All the `sleep` calls have their sleep time multiplied by this value. The current value is pretty slow to be on the safe side, so if your VM is consistently faster than the time the sleeps allows for, decrease the `slowfactor`.
 
