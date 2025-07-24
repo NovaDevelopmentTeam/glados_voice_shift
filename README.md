@@ -3,7 +3,7 @@ GLaDOS voice generator GUI automation script
 
 **Disclaimer: This script was written years ago. It is extremely dirty. I did not plan to open source this but am doing so anyway due to repeated requests over the years. Use with care and caution.** Risk of sanity loss ahead.
 
-This is the script that powers the Windows/Melodyne GUI automation side of the [GLaDOS voice generator].
+This is the script that powers the Windows/Melodyne GUI automation side of the [GLaDOS voice generator] (dead website, will replace it).
 
 It is extremely dirty and extremely brittle. It will assume the following (list may not be exhaustive):
 
