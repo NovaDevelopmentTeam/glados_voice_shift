@@ -44,7 +44,5 @@ Why is this script so dirty? So full of brittle assumptions? Why doesn't it take
 
 [GLaDOS voice generator]: http://glados.biringa.com/
 [win32all]: https://sourceforge.net/projects/pywin32/
-[SendKeys]: https://pypi.python.org/pypi/SendKeys/0.3
 [PIL]: http://www.pythonware.com/products/pil/
-[psyco]: http://psyco.sourceforge.net/
 [taskkill.exe]: https://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/taskkill.mspx
