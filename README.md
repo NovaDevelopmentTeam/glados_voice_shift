@@ -28,9 +28,7 @@ It is extremely dirty and extremely brittle. It will assume the following (list 
 It required Python 2.x with the following dependencies:
 
   * [win32all] to do mouse clicks
-  * [SendKeys] to send keypresses
   * [PIL] to take screenshots
-  * [psyco] to make the brute-force image matching a fair bit faster
 
 You'll likely want the 32-bit version because of these dependencies.
 
